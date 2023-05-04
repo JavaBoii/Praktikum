@@ -1,4 +1,4 @@
-package Zettel_2;
+package zettel_2;
 
 public class Zettel2Aufgabe1 {
 

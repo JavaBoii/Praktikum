@@ -1,4 +1,4 @@
-package Zettel_1;
+package zettel_1;
 
 import java.util.Scanner;
 
