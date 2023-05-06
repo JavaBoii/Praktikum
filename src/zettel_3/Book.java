@@ -1,5 +1,8 @@
 package zettel_3;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
 public class Book {
     private static long idCounter = 0;
     private final long id;
@@ -7,6 +10,7 @@ public class Book {
     private String authors;
     private long isbn;
     private boolean isBorrowed;
+    private Date lastBorrowedDate;
 
     public Book() {
         id = idCounter++;
@@ -54,15 +58,31 @@ public class Book {
 
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
+        if (borrowed) {
+            lastBorrowedDate = new Date();
+        }
     }
 
-    @Override
-    public String toString() {
-        String borrowedColor = isBorrowed ? "\u001B[31m" : "\u001B[32m"; // Rot für true, Grün für false
+    public String getLastBorrowedDateString() {
+        if (lastBorrowedDate == null) {
+            return "N/A";
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+        return sdf.format(lastBorrowedDate);
+    }
+
+    public String toString(boolean showLastBorrowed) {
+        String borrowedColor = isBorrowed ? "\u001B[31m" : "\u001B[32m";
         String resetColor = "\u001B[0m";
+        String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + "%-5b" + resetColor + " |", id, title, authors, isbn, isBorrowed);
+        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + "%-5b" + resetColor + lastBorrowedString + " |", id, title, authors, isbn, isBorrowed);
     }
+
+    public String toString() {
+        return toString(false);
+    }
+
 
 }
 
