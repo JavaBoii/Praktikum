@@ -14,6 +14,10 @@ public class Student {
         this.borrowedBooks = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void addBook(Book book) {
         borrowedBooks.add(book);
         book.setBorrowed(true);
@@ -27,7 +31,7 @@ public class Student {
 
     public void displayBorrowedBooks() {
         for (Book book : borrowedBooks) {
-            System.out.println(book.toString());
+            System.out.println(book);
         }
     }
 

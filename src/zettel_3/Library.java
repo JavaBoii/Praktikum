@@ -22,7 +22,10 @@ import java.util.List;
 
         public void returnBook(Student student, Book book) {
             student.removeBook(book);
-            availableBooks.add(book);
+            book.setBorrowed(false);
+            if (!availableBooks.contains(book)) {
+                availableBooks.add(book);
+            }
         }
 
         public void displayAvailableBooks() {
