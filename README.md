@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://www.hochschule-ruhr-west.de/">
     <img src="images/hrw_logo.png" alt="Logo" width=auto height="200">
   </a>
 
