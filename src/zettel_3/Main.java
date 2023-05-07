@@ -12,15 +12,20 @@ public class Main {
 
     public static void main(String[] args) {
         // Erstellen von Büchern
-        Book book1 = new Book("Buch1", "Autor1, Autor2", 1234567890L, false);
-        Book book2 = new Book("Buch2", "Autor3", 2345678901L, false);
-        Book book3 = new Book("Buch3", "Autor4, Autor5", 3456789012L, false);
+        Book book1 = new Book();
+        book1.setTitle("Buch1");
+        book1.setAuthors("Autor1, Autor2");
+        book1.setIsbn(1234567890L);
+        book1.setBorrowed(false);
+
+        Book book2 = new Book("Garry Lotter", "Grindewald", 2345678901L, false);
+        Book book3 = new Book("Basic Chemistry", "Skyler White, Nestlé", 3456789012L, false);
         Book book4 = new Book("Buch4", "Autor6", 4567890123L, false);
-        Book book5 = new Book("Buch5", "Autor7, Autor8", 5678901234L, false);
-        Book book6 = new Book("Buch6", "Autor9", 6789012345L, false);
+        Book book5 = new Book("Buch5", "Autor7", 5678901234L, false);
+        Book book6 = new Book("Intermediate Chemistry", "Skyler White, UnOwen", 6789012345L, false);
         Book book7 = new Book("Buch7", "Autor10, Autor11", 7890123456L, false);
-        Book book8 = new Book("Buch8", "Autor12", 8901234567L, false);
-        Book book9 = new Book("Buch9", "Autor13, Autor14", 9012345678L, false);
+        Book book8 = new Book("How to sell Drugs | Beginner Edition", "Autor12", 8901234567L, false);
+        Book book9 = new Book("Advanced Chemistry", "Obamium, Thanos", 9012345678L, false);
         Book book10 = new Book("Buch10", "Autor15", 1234567891L, false);
 
         separator(33);
@@ -54,6 +59,15 @@ public class Main {
         System.out.println(book8);
         System.out.println(book9);
         System.out.println(book10);
+
+        separator(33);
+
+        System.out.println("Buch1 Details:");
+        System.out.println("ID: " + book1.getId());
+        System.out.println("Titel: " + book1.getTitle());
+        System.out.println("Autoren: " + book1.getAuthors());
+        System.out.println("ISBN: " + book1.getIsbn());
+        System.out.println("Ausgeliehen: " + book1.isBorrowed());
 
         separator(33);
 
@@ -133,6 +147,7 @@ public class Main {
         // Testen der isBookAvailable-Funktion
         System.out.println("Ist 'Buch1' verfügbar? " + (library.isBookAvailable("Buch1") ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
         System.out.println("Ist 'Buch4' verfügbar? " + (library.isBookAvailable("Buch4") ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
+        System.out.println("Ist 'Buch6' verfügbar? " + (library.isBookAvailable(book6) ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
 
 
         separator(33);

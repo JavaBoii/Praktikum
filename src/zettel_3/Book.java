@@ -71,12 +71,21 @@ public class Book {
         return sdf.format(lastBorrowedDate);
     }
 
+    private String truncateTitle(String title, int maxLength) {
+        if (title.length() > maxLength) {
+            return title.substring(0, maxLength - 3) + "...";
+        }
+        return title;
+    }
+
     public String toString(boolean showLastBorrowed) {
+        String truncatedTitle = truncateTitle(title, 20);
+
         String borrowedColor = isBorrowed ? "\u001B[31m" : "\u001B[32m";
         String resetColor = "\u001B[0m";
         String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + "%-5b" + resetColor + lastBorrowedString + " |", id, title, authors, isbn, isBorrowed);
+        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + "%-5b" + resetColor + lastBorrowedString + " |", id, truncatedTitle, authors, isbn, isBorrowed);
     }
 
     public String toString() {
