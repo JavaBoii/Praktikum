@@ -1,7 +1,7 @@
 package zettel_3;
 
 public class Main {
-//branch example
+
     public static void separator(int length) {
         System.out.print("\n#");
         for (int i = 0; i < length - 2; i++) {
