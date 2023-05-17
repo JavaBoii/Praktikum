@@ -4,7 +4,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class Book {
-    private static long idCounter = 0;
+    private static long idCounter = 1;
     private final long id;
     private String title;
     private String authors;
@@ -81,11 +81,11 @@ public class Book {
     public String toString(boolean showLastBorrowed) {
         String truncatedTitle = truncateTitle(title, 20);
 
-        String borrowedColor = isBorrowed ? "\u001B[31m" : "\u001B[32m";
+        String borrowedColor = isBorrowed ? "\u001B[31mNicht verfügbar" : "\u001B[32m   verfügbar   ";
         String resetColor = "\u001B[0m";
         String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + "%-5b" + resetColor + lastBorrowedString + " |", id, truncatedTitle, authors, isbn, isBorrowed);
+        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + resetColor + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
     }
 
     public String toString() {

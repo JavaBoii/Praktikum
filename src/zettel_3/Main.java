@@ -94,8 +94,6 @@ public class Main {
         library.addBook(book9);
         library.addBook(book10);
 
-
-
         // Füge den Studierenden zur Bibliothek hinzu
         library.addUser(student1);
         library.addUser(student2);
@@ -145,18 +143,18 @@ public class Main {
         separator(33);
 
         // Testen der isBookAvailable-Funktion
-        System.out.println("Ist 'Buch1' verfügbar? " + (library.isBookAvailable("Buch1") ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
-        System.out.println("Ist 'Buch4' verfügbar? " + (library.isBookAvailable("Buch4") ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
-        System.out.println("Ist 'Buch6' verfügbar? " + (library.isBookAvailable(book6) ? "\u001B[32mtrue\u001B[0m" : "\u001B[31mfalse\u001B[0m"));
+        System.out.println("Ist 'Buch1' verfügbar? " + (library.isBookAvailable("Buch1") ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
+        System.out.println("Ist 'Buch4' verfügbar? " + (library.isBookAvailable("Buch4") ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
+        System.out.println("Ist 'Buch6' verfügbar? " + (library.isBookAvailable(book6) ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
 
 
         separator(33);
 
         // Testen der isBorrowed-Funktion
-        System.out.println("Ist 'Buch1' von Student1 ausgeliehen? " + (student1.isBorrowed("Buch1") ? "\u001B[31mtrue\u001B[0m" : "\u001B[32mfalse\u001B[0m"));
-        System.out.println("Ist 'Buch2' von Student1 ausgeliehen? " + (student1.isBorrowed(book2) ? "\u001B[31mtrue\u001B[0m" : "\u001B[32mfalse\u001B[0m"));
-        System.out.println("Ist 'Buch2' von Student2 ausgeliehen? " + (student1.isBorrowed(book4) ? "\u001B[31mtrue\u001B[0m" : "\u001B[32mfalse\u001B[0m"));
-        System.out.println("Ist 'Buch2' von Student2 ausgeliehen? " + (student1.isBorrowed(book7) ? "\u001B[31mtrue\u001B[0m" : "\u001B[32mfalse\u001B[0m"));
+        System.out.println("Ist 'Buch1' von Student1 ausgeliehen? " + (student1.isBorrowed("Buch1") ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
+        System.out.println("Ist 'Buch2' von Student1 ausgeliehen? " + (student1.isBorrowed(book2) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
+        System.out.println("Ist 'Buch4' von Student2 ausgeliehen? " + (student2.isBorrowed(book4) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
+        System.out.println("Ist 'Buch7' von Student2 ausgeliehen? " + (student2.isBorrowed(book7) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
 
     }
 }
