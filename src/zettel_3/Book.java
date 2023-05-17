@@ -24,6 +24,8 @@ public class Book {
         this.isBorrowed = isBorrowed;
     }
 
+// you suck
+
     public long getId() {
         return id;
     }
