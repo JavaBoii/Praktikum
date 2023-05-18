@@ -57,7 +57,7 @@ public class Main {
         book1.setTitle("Neuer Buch1 Titel");
         book1.setAuthors("Autor1, Autor 2, Autor6");
         book1.setIsbn(9876543210L);
-        book1.setBorrowed(true);
+        book1.setBorrowed(false);
 
         System.out.println(book1 + " (aktualisiert)");
         System.out.println(book2);
