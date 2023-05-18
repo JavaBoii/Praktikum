@@ -12,6 +12,34 @@ public class Library {
         this.students = new ArrayList<>();
     }
 
+    public List<Book> getAvailableBooks() {
+        return this.availableBooks;
+    }
+
+    public List<Student> getStudents() {
+        return this.students;
+    }
+
+    public void borrowBook(Student student, Book book) {
+        student.addBook(book);
+        book.setBorrowed(true);
+    }
+
+    public void removeBook(Book book) {
+        availableBooks.remove(book);
+    }
+
+    //getBook(editId)
+    public Book getBook(long id) {
+        for (Book book : availableBooks) {
+            if (book.getId() == id) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+
     public void addBook(Book book) {
         availableBooks.add(book);
     }
@@ -35,13 +63,22 @@ public class Library {
     }
 
     public boolean isBookAvailable(Book book) {
-        return availableBooks.contains(book);
+        return book.isBorrowed();
     }
 
     public boolean isBookAvailable(String title) {
         for (Book book : availableBooks) {
             if (book.getTitle().equals(title)) {
-                return true;
+                return book.isBorrowed();
+            }
+        }
+        return false;
+    }
+
+    public boolean isBookAvailable(long id) {
+        for (Book book : availableBooks) {
+            if (book.getId() == id) {
+                return book.isBorrowed();
             }
         }
         return false;
