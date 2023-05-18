@@ -17,7 +17,7 @@ public class Main {
         for (int i = 0; i < length - 2; i++) {
             System.out.print("----");
         }
-        System.out.println( "#\u001B[0m\n");
+        System.out.println("#\u001B[0m\n");
     }
 
     public static void main(String[] args) {
@@ -172,7 +172,7 @@ public class Main {
         //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        while(running) {
+        while (running) {
             System.out.println("Was möchten Sie tun?");
             System.out.println("1: Buchverwaltung");
             System.out.println("2: Studentenverwaltung");
@@ -239,12 +239,18 @@ public class Main {
                             for (Book book : library.getAvailableBooks()) {
                                 if (book.getId() == deleteId) {
                                     library.removeBook(book);
+                                    separator(33, "\u001B[32m");
+                                    System.out.print("\u001B[32mBuch erfolgreich gelöscht\n\u001B[0m");
+                                    separator(33, "\u001B[32m");
+                                    break;
+                                } else {
+                                    separator(33, "\u001B[31m");
+                                    System.out.print("\u001B[31mBuch nicht im System\n\u001B[0m");
+                                    separator(33, "\u001B[31m");
                                     break;
                                 }
                             }
-                            separator(33, "\u001B[32m");
-                            System.out.print("\u001B[32mBuch erfolgreich gelöscht\n\u001B[0m");
-                            separator(33, "\u001B[32m");
+
                             break;
                         case 3:
                             System.out.println("Geben Sie die ID des zu bearbeitenden Buches ein:");
@@ -339,100 +345,100 @@ public class Main {
                         case 4:
                             break;
                         default:
-                            System.out.println("Ungültige Eingabe, bitte erneut eingeben.");
-                            separator(33);
+                            separator(33, "\u001B[31m");
+                            System.out.println("\u001B[31mUngültige Eingabe\u001B[0m");
+                            separator(33, "\u001B[31m");
                     }
                     break;
                 case 3:
-                    System.out.println("Geben Sie den Titel des Buches ein, das Sie ausleihen möchten:");
+                    System.out.println("Geben Sie die ID des Buches ein, das Sie ausleihen möchten:");
                     System.out.print("\u001B[33mEingabe: \u001B[0m");
-                    String bookTitle = scanner.nextLine();
+                    String bookId = scanner.nextLine();
+                    long bookIdLong = Long.parseLong(bookId);
 
-                    if(library.isBookAvailable(bookTitle)) {
-                        System.out.println("Möchten Sie '" + bookTitle + "' ausleihen? \n [\u001B[32my\u001B[0m / \u001B[31mn\u001B[0m]");
-                        System.out.print("\u001B[33mEingabe: \u001B[0m");
-                        String confirmation = scanner.nextLine();
-
-                        if(confirmation.toLowerCase().equals("y")) {
-                            System.out.println("Für welchen Studenten?");
-                            System.out.print("\u001B[33mEingabe: \u001B[0m");
-                            String studentName = scanner.nextLine();
-                            // Find the student
-                            Student targetStudent = null;
-                            for(Student student : library.getStudents()) {
-                                if(student.getName().equals(studentName)) {
-                                    targetStudent = student;
-                                    break;
-                                }
+                    if (!library.isBookAvailable(bookIdLong)) {
+                        // Find the book
+                        Book targetBook = null;
+                        for (Book book : library.getAvailableBooks()) {
+                            if (book.getId() == Long.parseLong(bookId)) {
+                                targetBook = book;
+                                break;
                             }
-                            if(targetStudent != null) {
-                                // Find the book
-                                Book targetBook = null;
-                                for(Book book : library.getAvailableBooks()) {
-                                    if(book.getTitle().equals(bookTitle)) {
-                                        targetBook = book;
+                        }
+                        if (targetBook != null) {
+                            // Ask for confirmation
+                            separator(33, "\u001B[36m");
+                            System.out.println("\u001B[36mMöchten Sie '\u001B[0m" + targetBook + "\u001B[36m' ausleihen? \n\u001B[0m [\u001B[32my\u001B[0m / \u001B[31mn\u001B[0m]");
+                            separator(33, "\u001B[36m");
+                            System.out.print("\u001B[33mEingabe: \u001B[0m");
+                            String confirmation = scanner.nextLine();
+
+                            if (confirmation.toLowerCase().equals("y")) {
+                                System.out.println("Für welchen Studenten?");
+                                System.out.print("\u001B[33mEingabe: \u001B[0m");
+                                String studentName = scanner.nextLine();
+                                // Find the student
+                                Student targetStudent = null;
+                                for (Student student : library.getStudents()) {
+                                    if (student.getName().equals(studentName)) {
+                                        targetStudent = student;
                                         break;
                                     }
                                 }
-                                if(targetBook != null) {
+                                if (targetStudent != null) {
+
                                     // If both student and book are found, borrow the book
-                                    library.borrowBook(targetStudent,targetBook);
+                                    library.borrowBook(targetStudent, targetBook);
                                     separator(33, "\u001B[32m");
                                     System.out.print("\u001B[32mBuch erfolgreich ausgeliehen von: \u001B[36m" + targetStudent.getName() + ".\n\u001B[0m");
                                     separator(33, "\u001B[32m");
+
                                 }
                             }
+                        } else {
+                            System.out.println("\u001B[31mBuch nicht gefunden.\u001B[0m");
                         }
+
                     } else {
-                        System.out.println("Buch nicht gefunden, bitte erneut eingeben.");
+                        System.out.println("\u001B[31mBuch nicht verfügbar.\u001B[0m");
                     }
                     separator(33);
                     break;
                 case 4:
-                    // Hier können Sie die Funktionalität zur Rückgabe eines Buches hinzufügen
-                    System.out.println("Geben Sie den Titel des Buches ein, das Sie zurückgeben möchten:");
+                    //Buch rückgabe
+                    System.out.println("Geben Sie den Namen des Studenten ein, der ein Buch zurückgeben möchte:");
                     System.out.print("\u001B[33mEingabe: \u001B[0m");
-                    String returnBookTitle = scanner.nextLine();
-
-                    if(library.isBookAvailable(returnBookTitle)) {
-                        System.out.println("Möchten Sie '" + returnBookTitle + "' zurückgeben? \n [\u001B[32my\u001B[0m / \u001B[31mn\u001B[0m]");
+                    String studentName = scanner.nextLine();
+                    // Find the student
+                    Student targetStudent = null;
+                    for (Student student : library.getStudents()) {
+                        if (student.getName().equals(studentName)) {
+                            targetStudent = student;
+                            break;
+                        }
+                    }
+                    if (targetStudent != null) {
+                        System.out.println("Geben Sie die Id des Buches ein, das zurückgegeben werden soll aus dieser Liste:");
+                        targetStudent.displayBorrowedBooks();
                         System.out.print("\u001B[33mEingabe: \u001B[0m");
-                        String confirmation = scanner.nextLine();
-
-                        if(confirmation.toLowerCase().equals("y")) {
-                            System.out.println("Für welchen Studenten?");
-                            System.out.print("\u001B[33mEingabe: \u001B[0m");
-                            String studentName = scanner.nextLine();
-                            // Find the student
-                            Student targetStudent = null;
-                            for(Student student : library.getStudents()) {
-                                if(student.getName().equals(studentName)) {
-                                    targetStudent = student;
-                                    break;
-                                }
-                            }
-                            if(targetStudent != null) {
-                                // Find the book
-                                Book targetBook = null;
-                                for(Book book : library.getAvailableBooks()) {
-                                    if(book.getTitle().equals(returnBookTitle)) {
-                                        targetBook = book;
-                                        break;
-                                    }
-                                }
-                                if(targetBook != null) {
-                                    // If both student and book are found, borrow the book
-                                    library.returnBook(targetStudent,targetBook);
-                                    separator(33, "\u001B[32m");
-                                    System.out.print("\u001B[32mBuch erfolgreich zurückgegeben von: \u001B[36m" + targetStudent.getName() + ".\n\u001B[0m");
-                                    separator(33, "\u001B[32m");
-                                }
+                        String returnBook = scanner.nextLine();
+                        // Find the book
+                        Book targetBook = null;
+                        for (Book book : targetStudent.getBorrowedBooks()) {
+                            if (book.getId() == Integer.parseInt(returnBook)) {
+                                targetBook = book;
+                                break;
                             }
                         }
-                    } else {
-                        System.out.println("Buch nicht gefunden, bitte erneut eingeben.");
+                        if (targetBook != null) {
+                            // If both student and book are found, return the book
+                            library.returnBook(targetStudent, targetBook);
+                            separator(33, "\u001B[32m");
+                            System.out.print("\u001B[32mBuch erfolgreich zurückgegeben von: \u001B[36m" + targetStudent.getName() + ".\n\u001B[0m");
+                            separator(33, "\u001B[32m");
+                        }
                     }
-                    separator(33);
+
                     break;
                 case 5:
                     library.displayAvailableBooks();
@@ -443,7 +449,7 @@ public class Main {
                     break;
                 default:
                     separator(33, "\u001B[31m");
-                    System.out.println("\u001B[31mUngültige Eingabe, bitte erneut eingeben.\u001B[0m");
+                    System.out.println("\u001B[31mUngültige Eingabe\u001B[0m");
                     separator(33, "\u001B[31m");
             }
         }

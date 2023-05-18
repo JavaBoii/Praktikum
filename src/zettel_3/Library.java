@@ -63,13 +63,22 @@ public class Library {
     }
 
     public boolean isBookAvailable(Book book) {
-        return availableBooks.contains(book);
+        return book.isBorrowed();
     }
 
     public boolean isBookAvailable(String title) {
         for (Book book : availableBooks) {
             if (book.getTitle().equals(title)) {
-                return true;
+                return book.isBorrowed();
+            }
+        }
+        return false;
+    }
+
+    public boolean isBookAvailable(long id) {
+        for (Book book : availableBooks) {
+            if (book.getId() == id) {
+                return book.isBorrowed();
             }
         }
         return false;
