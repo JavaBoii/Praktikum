@@ -32,6 +32,10 @@ public class Student {
         }
     }
 
+    public List<Book> getBorrowedBooks() {
+        return borrowedBooks;
+    }
+
     public boolean isBorrowed(Book book) {
         return borrowedBooks.contains(book);
     }

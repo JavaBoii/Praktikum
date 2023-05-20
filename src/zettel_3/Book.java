@@ -88,7 +88,8 @@ public class Book {
         String borrowedColor = isBorrowed ? Red + "Nicht verfügbar" : Green + "   verfügbar   ";
         String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + Reset + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
+        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Status: " + borrowedColor + Reset + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
+
     }
 
     public String toString() {
