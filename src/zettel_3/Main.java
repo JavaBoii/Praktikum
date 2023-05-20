@@ -12,6 +12,11 @@ public class Main {
         System.out.println("#\n");
     }
 
+
+    static String Green = "\u001B[32m";
+    static String Red = "\u001B[31m";
+    static String Reset = "\u001B[0m";
+
     public static void separator(int length, String text) {
         System.out.print(text + "\n#");
         for (int i = 0; i < length - 2; i++) {
@@ -19,6 +24,7 @@ public class Main {
         }
         System.out.println("#\u001B[0m\n");
     }
+
 
     public static void main(String[] args) {
         // Erstellen von Büchern
@@ -153,17 +159,17 @@ public class Main {
         separator(33);
 
         // Testen der isBookAvailable-Funktion
-        System.out.println("Ist 'Buch1' verfügbar? " + (library.isBookAvailable("Buch1") ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
-        System.out.println("Ist 'Buch4' verfügbar? " + (library.isBookAvailable("Buch4") ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
-        System.out.println("Ist 'Buch6' verfügbar? " + (library.isBookAvailable(book6) ? "\u001B[32mJa\u001B[0m" : "\u001B[31mNein\u001B[0m"));
+        System.out.println("Ist 'Buch1' verfügbar? " + (library.isBookAvailable("Buch1") ? Green + "Ja" + Reset : Red + "Nein" + Reset));
+        System.out.println("Ist 'Buch4' verfügbar? " + (library.isBookAvailable("Buch4") ? Green + "Ja" + Reset : Red + "Nein" + Reset));
+        System.out.println("Ist 'Buch6' verfügbar? " + (library.isBookAvailable(book6) ? Green + "Ja" + Reset : Red + "Nein" + Reset));
 
         separator(33);
 
         // Testen der isBorrowed-Funktion
-        System.out.println("Ist 'Buch1' von Student1 ausgeliehen? " + (student1.isBorrowed("Buch1") ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
-        System.out.println("Ist 'Buch2' von Student1 ausgeliehen? " + (student1.isBorrowed(book2) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
-        System.out.println("Ist 'Buch4' von Student2 ausgeliehen? " + (student2.isBorrowed(book4) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
-        System.out.println("Ist 'Buch7' von Student2 ausgeliehen? " + (student2.isBorrowed(book7) ? "\u001B[31mAusgeliehen\u001B[0m" : "\u001B[32mNicht Ausgeliehen\u001B[0m"));
+        System.out.println("Ist 'Buch1' von Student1 ausgeliehen? " + (student1.isBorrowed("Buch1") ? Red + "Ausgeliehen" + Reset : Green + "Nicht Ausgeliehen" + Reset));
+        System.out.println("Ist 'Buch2' von Student1 ausgeliehen? " + (student1.isBorrowed(book2) ? Red + "Ausgeliehen" + Reset : Green + "Nicht Ausgeliehen" + Reset));
+        System.out.println("Ist 'Buch4' von Student2 ausgeliehen? " + (student2.isBorrowed(book4) ? Red + "Ausgeliehen" + Reset : Green + "Nicht Ausgeliehen" + Reset));
+        System.out.println("Ist 'Buch7' von Student2 ausgeliehen? " + (student2.isBorrowed(book7) ? Red + "Ausgeliehen" + Reset : Green + "Nicht Ausgeliehen" + Reset));
 
         separator(33);
 
