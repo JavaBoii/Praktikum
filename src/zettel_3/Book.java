@@ -12,6 +12,10 @@ public class Book {
     private boolean isBorrowed;
     private Date lastBorrowedDate;
 
+    static String Green = "\u001B[32m";
+    static String Red = "\u001B[31m";
+    static String Reset = "\u001B[0m";
+
     public Book() {
         id = idCounter++;
     }
@@ -81,11 +85,10 @@ public class Book {
     public String toString(boolean showLastBorrowed) {
         String truncatedTitle = truncateTitle(title, 20);
 
-        String borrowedColor = isBorrowed ? "\u001B[31mNicht verfügbar" : "\u001B[32m   verfügbar   ";
-        String resetColor = "\u001B[0m";
+        String borrowedColor = isBorrowed ? Red + "Nicht verfügbar" : Green + "   verfügbar   ";
         String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + resetColor + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
+        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Borrowed: " + borrowedColor + Reset + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
     }
 
     public String toString() {
