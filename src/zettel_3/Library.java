@@ -12,6 +12,16 @@ public class Library {
         this.students = new ArrayList<>();
     }
 
+    public int getBorrowedBooks() {
+        int borrowedBooksCounter = 0;
+        for (Book book : availableBooks) {
+            if (book.isBorrowed()) {
+                borrowedBooksCounter++;
+            }
+        }
+        return borrowedBooksCounter;
+    }
+
     public List<Book> getAvailableBooks() {
         return this.availableBooks;
     }
