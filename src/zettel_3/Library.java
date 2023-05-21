@@ -6,7 +6,41 @@ import java.util.List;
 public class Library {
     private List<Book> availableBooks;
     private List<Student> students;
+    private int changesBooks = 0;
+    private int changesStudents = 0;
+    private int changesBorrowedBooks = 0;
+    private int lastBorrowedBookCount = 0;
+    private int lastBookCount = 0;
+    private int lastStudentCount = 0;
 
+    public String getBookChangeSymbol() {
+        if (changesBooks > lastBookCount) {
+            return Styling.GREEN + "↑" + Styling.RESET;
+        } else if (changesBooks < lastBookCount) {
+            return Styling.RED + "↓" + Styling.RESET;
+        } else {
+            return Styling.YELLOW + "→" + Styling.RESET;
+        }
+    }
+
+    public String getStudentChangeSymbol() {
+        if (changesStudents > lastStudentCount) {
+            return Styling.GREEN + "↑" + Styling.RESET;
+        } else if (changesStudents < lastStudentCount) {
+            return Styling.RED + "↓" + Styling.RESET;
+        } else {
+            return Styling.YELLOW + "→" + Styling.RESET;
+        }
+    }
+    public String getBorrowedBookChangeSymbol() {
+        if (changesBorrowedBooks > lastBorrowedBookCount) {
+            return Styling.GREEN + "↑" + Styling.RESET;
+        } else if (changesBorrowedBooks < lastBorrowedBookCount) {
+            return Styling.RED + "↓" + Styling.RESET;
+        } else {
+            return Styling.YELLOW + "→" + Styling.RESET;
+        }
+    }
     public Library() {
         this.availableBooks = new ArrayList<>();
         this.students = new ArrayList<>();
@@ -33,10 +67,14 @@ public class Library {
     public void borrowBook(Student student, Book book) {
         student.addBook(book);
         book.setBorrowed(true);
+        lastBorrowedBookCount = changesBorrowedBooks;
+        changesBorrowedBooks = getBorrowedBooks();
     }
 
     public void removeBook(Book book) {
         availableBooks.remove(book);
+        lastBookCount = changesBooks;
+        changesBooks = availableBooks.size();
     }
 
     //getBook(editId)
@@ -52,18 +90,27 @@ public class Library {
 
     public void addBook(Book book) {
         availableBooks.add(book);
+        lastBookCount = changesBooks;
+        changesBooks = availableBooks.size();
     }
 
     public void addUser(Student student) {
         students.add(student);
+        lastStudentCount = changesStudents;
+        changesStudents = students.size();
+    }
+
+    public void removeUser(Student student) {
+        students.remove(student);
+        lastStudentCount = changesStudents;
+        changesStudents = students.size();
     }
 
     public void returnBook(Student student, Book book) {
         student.removeBook(book);
         book.setBorrowed(false);
-        if (!availableBooks.contains(book)) {
-            availableBooks.add(book);
-        }
+        lastBorrowedBookCount = changesBorrowedBooks;
+        changesBorrowedBooks = getBorrowedBooks();
     }
 
     public void displayAvailableBooks() {
