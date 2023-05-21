@@ -12,10 +12,6 @@ public class Book {
     private boolean isBorrowed;
     private Date lastBorrowedDate;
 
-    static String Green = "\u001B[32m";
-    static String Red = "\u001B[31m";
-    static String Reset = "\u001B[0m";
-
     public Book() {
         id = idCounter++;
     }
@@ -31,6 +27,7 @@ public class Book {
     public long getId() {
         return id;
     }
+
 
     public String getTitle() {
         return title;
@@ -85,10 +82,10 @@ public class Book {
     public String toString(boolean showLastBorrowed) {
         String truncatedTitle = truncateTitle(title, 20);
 
-        String borrowedColor = isBorrowed ? Red + "Nicht verfügbar" : Green + "   verfügbar   ";
-        String lastBorrowedString = showLastBorrowed ? " | Last borrowed: " + getLastBorrowedDateString() : "";
+        String borrowedColor = isBorrowed ? Styling.RED + "Nicht verfügbar" : Styling.GREEN + "   verfügbar   ";
+        String lastBorrowedString = showLastBorrowed ? " | " + Styling.CYAN + "Last borrowed" + Styling.RESET + ": " + getLastBorrowedDateString() : "";
 
-        return String.format("| ID: %-4d | Title: %-20s | Authors: %-30s | ISBN: %-13d | Status: " + borrowedColor + Reset + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
+        return String.format("| " + Styling.CYAN + "ID" + Styling.RESET + ": %-4d | " + Styling.CYAN + "Title" + Styling.RESET + ": %-20s | " + Styling.CYAN + "Authors" + Styling.RESET + ": %-30s | " + Styling.CYAN + "ISBN" + Styling.RESET + ": %-13d | " + Styling.CYAN + "Status" + Styling.RESET + ": " + borrowedColor + Styling.RESET + lastBorrowedString + " |", id, truncatedTitle, authors, isbn);
 
     }
 
