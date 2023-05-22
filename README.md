@@ -35,7 +35,7 @@ Darüber könnt ihr das Repository entweder mithilfe von Git klonen oder dieses 
 - [x] Aufgabenzettel 1 - bewertet
 - [x] Aufgabenzettel 2 - bewertet
 - [x] Aufgabenzettel 3
-- [ ] Aufgabenzettel 4
+- [x] Aufgabenzettel 4
 - [ ] Aufgabenzettel 5
 - [ ] Aufgabenzettel 6
 - [ ] Aufgabenzettel 7
