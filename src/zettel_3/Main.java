@@ -238,7 +238,7 @@ public class Main {
                     scanner.nextLine();
                     separator(Styling.SEPARATOR_SIZE);
                     switch (bookInput) {
-                        case 1:
+                        case 1 -> {
                             boolean runningBook = true;
                             while (runningBook) {
                                 userInputRequest("Geben Sie den Titel des Buches ein:");
@@ -270,10 +270,9 @@ public class Main {
                                 } else {
                                     userInputRequest(Styling.RED + "Bitte geben Sie eine gültige Eingabe ein!" + Styling.RESET);
                                 }
-
                             }
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             userInputRequest("Geben Sie die ID des zu löschenden Buches ein:", Styling.RESET, Styling.YELLOW, true);
                             long deleteId = scanner.nextLong();
                             scanner.nextLine();
@@ -288,10 +287,8 @@ public class Main {
                                     break;
                                 }
                             }
-
-                            break;
-                        case 3:
-
+                        }
+                        case 3 -> {
                             userInputRequest("Geben Sie die ID des zu bearbeitenden Buches ein:", Styling.RESET, Styling.YELLOW, true);
                             if (!scanner.hasNextLong()) {
                                 System.out.println(Styling.RED + "Es sind nur Zahlen erlaubt!" + Styling.RESET);
@@ -350,13 +347,15 @@ public class Main {
                                 );
 
                             }
-                            break;
-                        case 4:
-                            break;
-                        default:
+                        }
+                        case 4 -> {
+                            //return
+                        }
+                        default -> {
                             separator(Styling.SEPARATOR_SIZE);
                             System.out.println("Ungültige Eingabe, bitte erneut eingeben.");
                             separator(Styling.SEPARATOR_SIZE);
+                        }
                     }
                 }
                 case 2 -> {
@@ -367,14 +366,14 @@ public class Main {
                     scanner.nextLine();
                     separator(Styling.SEPARATOR_SIZE);
                     switch (studentInput) {
-                        case 1:
+                        case 1 -> {
                             userInputRequest("Geben Sie den Namen des Studenten ein:");
                             String newStudentName = scanner.nextLine();
                             library.addUser(new Student(newStudentName));
                             message(Styling.GREEN, "Student erfolgreich hinzugefügt:", newStudentName);
                             separator(Styling.SEPARATOR_SIZE);
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             userInputRequest("Geben Sie den Namen des zu löschenden Studenten ein:");
                             String deleteStudentName = scanner.nextLine();
                             for (Student student : library.getStudents()) {
@@ -385,8 +384,8 @@ public class Main {
                                 }
                             }
                             separator(Styling.SEPARATOR_SIZE);
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             boolean runningStudent = true;
                             int attempts = 0;
                             while (runningStudent) {
@@ -418,12 +417,11 @@ public class Main {
                                 }
                             }
                             separator(Styling.SEPARATOR_SIZE);
-                            break;
-
-                        case 4:
-                            break;
-                        default:
-                            message(Styling.RED, "Ungültige Eingabe");
+                        }
+                        case 4 -> {
+                            //return
+                        }
+                        default -> message(Styling.RED, "Ungültige Eingabe");
                     }
                 }
                 case 3 -> {
