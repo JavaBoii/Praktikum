@@ -22,11 +22,6 @@ public class Main {
         System.out.print(Styling.YELLOW + "Eingabe: " + Styling.RESET);
     }
 
-    public static void userInputRequest(String input, String colorOut, String colorIn) {
-        System.out.println(colorOut + input + Styling.RESET);
-        System.out.print(colorIn + "Eingabe: " + Styling.RESET);
-    }
-
     public static void userInputRequest(String input, String colorOut, String colorIn, boolean separator) {
         System.out.println(colorOut + input + Styling.RESET);
         separator(Styling.SEPARATOR_SIZE);
@@ -139,16 +134,16 @@ public class Main {
         library.addUser(student2);
 
         // Ausleihen von Büchern durch Student1
-        student1.addBook(book1);
-        student1.addBook(book2);
-        student1.addBook(book4);
-        student1.addBook(book5);
+        student1.borrowBook(book1);
+        student1.borrowBook(book2);
+        student1.borrowBook(book4);
+        student1.borrowBook(book5);
 
         // Ausleihen von Büchern durch Student2
-        student2.addBook(book3);
-        student2.addBook(book6);
-        student2.addBook(book8);
-        student2.addBook(book9);
+        student2.borrowBook(book3);
+        student2.borrowBook(book6);
+        student2.borrowBook(book8);
+        student2.borrowBook(book9);
 
         // Zeige alle verfügbaren Bücher in der Bibliothek
         System.out.println("Verfügbare Bücher in der Bibliothek:");
@@ -157,7 +152,7 @@ public class Main {
         separator(Styling.SEPARATOR_SIZE);
 
         // Zeige alle ausgeliehenen Bücher des Studierenden
-        System.out.println("Ausgeliehene Bücher von " + student1.getName() + ":");
+        System.out.println("Ausgeliehene Bücher von " + student1.getName());
         student1.displayBorrowedBooks();
 
         separator(Styling.SEPARATOR_SIZE);
@@ -235,14 +230,13 @@ public class Main {
             separator(Styling.SEPARATOR_SIZE);
 
             switch (input) {
-                case 1:
+                case 1 -> {
                     System.out.println("1: Buch hinzufügen, 2: Buch löschen, 3: Buch bearbeiten, 4: Zurück");
                     separator(Styling.SEPARATOR_SIZE);
                     System.out.print(Styling.YELLOW + "Eingabe: " + Styling.RESET);
                     int bookInput = scanner.nextInt();
                     scanner.nextLine();
                     separator(Styling.SEPARATOR_SIZE);
-
                     switch (bookInput) {
                         case 1:
                             boolean runningBook = true;
@@ -364,15 +358,14 @@ public class Main {
                             System.out.println("Ungültige Eingabe, bitte erneut eingeben.");
                             separator(Styling.SEPARATOR_SIZE);
                     }
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("1: Student hinzufügen, 2: Student löschen, 3: Student anzeigen, 4: Zurück");
                     separator(Styling.SEPARATOR_SIZE);
                     System.out.print(Styling.YELLOW + "Eingabe: " + Styling.RESET);
                     int studentInput = scanner.nextInt();
                     scanner.nextLine();
                     separator(Styling.SEPARATOR_SIZE);
-
                     switch (studentInput) {
                         case 1:
                             userInputRequest("Geben Sie den Namen des Studenten ein:");
@@ -432,9 +425,9 @@ public class Main {
                         default:
                             message(Styling.RED, "Ungültige Eingabe");
                     }
-                    break;
-                case 3:
-                    userInputRequest("Liste aller Bücher anzeigen? ["+Styling.GREEN + "y" + Styling.RESET + "/" + Styling.RED + "n" + Styling.RESET + "]");
+                }
+                case 3 -> {
+                    userInputRequest("Liste aller Bücher anzeigen? [" + Styling.GREEN + "y" + Styling.RESET + "/" + Styling.RED + "n" + Styling.RESET + "]");
                     String displayBooks = scanner.nextLine();
                     if (displayBooks.equals("y")) {
                         library.displayAvailableBooks();
@@ -442,7 +435,6 @@ public class Main {
                     userInputRequest("Geben Sie die ID des Buches ein, das Sie ausleihen möchten:");
                     String bookId = scanner.nextLine();
                     long bookIdLong = Long.parseLong(bookId);
-
                     if (!library.isBookAvailable(bookIdLong)) {
                         // Find the book
                         Book targetBook = null;
@@ -458,7 +450,7 @@ public class Main {
                             userInputRequest(Styling.CYAN + "Möchten Sie '" + Styling.RESET + targetBook + Styling.CYAN + "' ausleihen? " + Styling.RESET + "\n[" + Styling.GREEN + "y" + Styling.RESET + " / " + Styling.RED + "n" + Styling.RESET + "]", Styling.NONE, Styling.YELLOW, true);
                             String confirmation = scanner.nextLine();
 
-                            if (confirmation.toLowerCase().equals("y")) {
+                            if (confirmation.equalsIgnoreCase("y")) {
                                 userInputRequest("Für welchen Studenten?");
                                 String studentName = scanner.nextLine();
                                 // Find the student
@@ -485,8 +477,8 @@ public class Main {
                         message(Styling.RED, "Buch nicht verfügbar.");
                     }
                     separator(Styling.SEPARATOR_SIZE);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     //Buch rückgabe
                     userInputRequest("Geben Sie den Namen des Studenten ein, der ein Buch zurückgeben möchte:");
                     String studentName = scanner.nextLine();
@@ -516,19 +508,14 @@ public class Main {
                             message(Styling.GREEN, "Buch erfolgreich zurückgegeben von: " + targetStudent.getName());
                         }
                     }
-
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     library.displayAvailableBooks();
                     message(Styling.GREEN, "Insgesamt: " + Styling.GREEN + library.getBorrowedBooks() + Styling.RESET + " Bücher ausgeliehen.");
-                    break;
-                case 6:
-                    running = false;
-                    break;
-                default:
-                    message(Styling.RED, "Ungültige Eingabe");
+                }
+                case 6 -> running = false;
+                default -> message(Styling.RED, "Ungültige Eingabe");
             }
         }
-
     }
 }

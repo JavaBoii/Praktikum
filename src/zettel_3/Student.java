@@ -16,12 +16,12 @@ public class Student {
         return name;
     }
 
-    public void addBook(Book book) {
+    public void borrowBook(Book book) {
         borrowedBooks.add(book);
         book.setBorrowed(true);
     }
 
-    public void removeBook(Book book) {
+    public void returnBook(Book book) {
         borrowedBooks.remove(book);
         book.setBorrowed(false);
     }

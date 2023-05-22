@@ -65,7 +65,7 @@ public class Library {
     }
 
     public void borrowBook(Student student, Book book) {
-        student.addBook(book);
+        student.borrowBook(book);
         book.setBorrowed(true);
         lastBorrowedBookCount = changesBorrowedBooks;
         changesBorrowedBooks = getBorrowedBooks();
@@ -107,7 +107,7 @@ public class Library {
     }
 
     public void returnBook(Student student, Book book) {
-        student.removeBook(book);
+        student.returnBook(book);
         book.setBorrowed(false);
         lastBorrowedBookCount = changesBorrowedBooks;
         changesBorrowedBooks = getBorrowedBooks();
