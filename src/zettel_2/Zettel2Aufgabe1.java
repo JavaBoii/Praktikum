@@ -2,7 +2,7 @@ package zettel_2;
 
 public class Zettel2Aufgabe1 {
 
-    static int[] arr = {1,2,3,4,2,4};
+    static int[] arr = {1,2,3,4};
 
     public static void main(String[] args) {
         int duplicate = findDuplicate(arr); //methode findDubplicate() wird der array arr[] übergeben

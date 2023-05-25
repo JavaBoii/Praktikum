@@ -1,4 +1,4 @@
-package zettel_3;
+package zettel_3.gui_test;
 
 import java.util.Scanner;
 
@@ -400,7 +400,6 @@ public class Main {
                                         } else {
                                             System.out.println("Der Student hat folgende Bücher ausgeliehen:");
                                             student.displayBorrowedBooks();
-                                            System.out.println("Es sind: " + Styling.BLUE + student.displayBorrowedBooksCount() + Styling.RESET + " ausgeliehen");
                                         }
                                         break;
                                     }

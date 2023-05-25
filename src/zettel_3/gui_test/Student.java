@@ -1,4 +1,4 @@
-package zettel_3;
+package zettel_3.gui_test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,14 +30,6 @@ public class Student {
         for (Book book : borrowedBooks) {
             System.out.println(book.toString(true));
         }
-    }
-
-    public int displayBorrowedBooksCount() {
-        int counter = 0;
-        for (Book book : borrowedBooks) {
-            counter++;
-        }
-            return counter;
     }
 
     public List<Book> getBorrowedBooks() {
