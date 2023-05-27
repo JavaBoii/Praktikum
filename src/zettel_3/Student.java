@@ -32,6 +32,14 @@ public class Student {
         }
     }
 
+    public int displayBorrowedBooksCount() {
+        int counter = 0;
+        for (Book book : borrowedBooks) {
+            counter++;
+        }
+            return counter;
+    }
+
     public List<Book> getBorrowedBooks() {
         return borrowedBooks;
     }

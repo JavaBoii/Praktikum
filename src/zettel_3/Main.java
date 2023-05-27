@@ -400,6 +400,7 @@ public class Main {
                                         } else {
                                             System.out.println("Der Student hat folgende Bücher ausgeliehen:");
                                             student.displayBorrowedBooks();
+                                            System.out.println("Es sind: " + Styling.BLUE + student.displayBorrowedBooksCount() + Styling.RESET + " ausgeliehen");
                                         }
                                         break;
                                     }

@@ -64,44 +64,15 @@ public class Library {
         return this.students;
     }
 
-    public void borrowBook(Student student, Book book) {
-        student.borrowBook(book);
-        book.setBorrowed(true);
-        lastBorrowedBookCount = changesBorrowedBooks;
-        changesBorrowedBooks = getBorrowedBooks();
-    }
-
-    public void removeBook(Book book) {
-        availableBooks.remove(book);
-        lastBookCount = changesBooks;
-        changesBooks = availableBooks.size();
-    }
-
-    //getBook(editId)
-    public Book getBook(long id) {
-        for (Book book : availableBooks) {
-            if (book.getId() == id) {
-                return book;
-            }
-        }
-        return null;
-    }
-
-
     public void addBook(Book book) {
         availableBooks.add(book);
         lastBookCount = changesBooks;
         changesBooks = availableBooks.size();
     }
 
+
     public void addUser(Student student) {
         students.add(student);
-        lastStudentCount = changesStudents;
-        changesStudents = students.size();
-    }
-
-    public void removeUser(Student student) {
-        students.remove(student);
         lastStudentCount = changesStudents;
         changesStudents = students.size();
     }
@@ -131,6 +102,36 @@ public class Library {
         }
         return false;
     }
+
+    public void borrowBook(Student student, Book book) {
+        student.borrowBook(book);
+        book.setBorrowed(true);
+        lastBorrowedBookCount = changesBorrowedBooks;
+        changesBorrowedBooks = getBorrowedBooks();
+    }
+
+    public void removeBook(Book book) {
+        availableBooks.remove(book);
+        lastBookCount = changesBooks;
+        changesBooks = availableBooks.size();
+    }
+
+    //getBook(editId)
+    public Book getBook(long id) {
+        for (Book book : availableBooks) {
+            if (book.getId() == id) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public void removeUser(Student student) {
+        students.remove(student);
+        lastStudentCount = changesStudents;
+        changesStudents = students.size();
+    }
+
 
     public boolean isBookAvailable(long id) {
         for (Book book : availableBooks) {
