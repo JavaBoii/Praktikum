@@ -1,3 +1,6 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/JavaBoii/Praktikum?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/JavaBoii/Praktikum?style=for-the-badge)
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -15,30 +18,112 @@
   </p>
 </div>
 
+---
+<!-- TABLE OF CONTENTS -->
+## Inhaltsverzeichnis
+
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+    - [Voraussetzungen](#voraussetzungen)
+    - [Installation über Github](#installation-über-github)
+    - [Installation über Git Version Control System (VCS)](#installation-über-git-version-control-system-vcs)
+- [Updaten mit VCS](#updaten-mit-vcs)
+- [Usage](#usage)
+
+
+
+---
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Aufgabenzettel 1 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
+- [x] Aufgabenzettel 2 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
+- [x] Aufgabenzettel 3 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
+- [x] Aufgabenzettel 4 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
+- [x] Aufgabenzettel 5 - ![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)
+- [ ] Aufgabenzettel 6 - ![In Bearbeitung](https://img.shields.io/badge/-in%20bearbeitung-yellow)
+- [ ] Aufgabenzettel 7 - ![Missing](https://img.shields.io/badge/-------gesperrt---------red)
+- [ ] Aufgabenzettel 8 - ![Missing](https://img.shields.io/badge/-------gesperrt---------red)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- Setup -->
+## Setup
+
+Folge diesen Schritten, um das Projekt lokal zu installieren.
+
+### Voraussetzungen
+
+* Java Development Kit (JDK), Version 8 oder höher
+* Eine integrierte Entwicklungsumgebung (IDE), z.B. Eclipse, IntelliJ IDEA, etc.
+* Git (optional)
+
+
+### Installation über Github
+![Instal](https://img.shields.io/badge/Repository%20herunterladen-text%20version-blue?style=for-the-badge)<br>
+   1. Klicke auf den grünen Button "Code" <br>
+   2. Klicke auf "Download ZIP" <br>
+   3. Entpacke die ZIP-Datei <br>
+   4. Öffne den Ordner "Praktikum" in deiner IDE <br>
+   5. Klicke auf "**Trust Project**" <br>
+   6. Im _src_ Ordner findest du alle Aufgabenzettel <br>
+
+![Instal](https://img.shields.io/badge/Repository%20herunterladen-video%20version-orange?style=for-the-badge)<br>
+1. Herunterladen der Repository als ZIP-Datei <br>
+<img src="images/githubDownloadCode.gif" alt="Logo" width=auto height="350"><br><br>
+2. Entpacken der ZIP-Datei <br>
+<img src="images/githubDownloadCodeEntpacken.gif" alt="Logo" width=auto height="350"><br><br>
+3. Öffnen des Ordners in der IDE <br>
+<img src="images/githubDownloadCodeOpenProject.gif" alt="Logo" width=auto height="350"><br><br>
+
+
+### Installation über Git Version Control System (VCS)
+![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-text%20version-blue?style=for-the-badge)<br>
+1. Klicke auf den grünen Button "Code" <br>
+2. Kopiere den Link (Bspsw. https://github.com/User/Repository.git) <br>
+3. Öffne deine IDE und klicke auf "**Get from VCS**" <br>
+4. Füge den Link ein und klicke auf "**Clone**" <br>
+5. Klicke auf "**Trust Project**" <br>
+6. Im _src_ Ordner findest du alle Aufgabenzettel <br>
+
+![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-video%20version-orange?style=for-the-badge)<br>
+1. Kopieren des Links <br>
+<img src="images/githubCloneCode.gif" alt="Logo" width=auto height="350"><br><br>
+2. Projekt über VCS öffnen <br>
+<img src="images/githubCloneCodeVSC.gif" alt="Logo" width=auto height="350"><br><br>
+3. Wenn du das Projekt in der IDE updaten möchtest, gehe zum Abschnitt
+* [Updaten](#Updaten)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- Updaten -->
+## Updaten mit VCS
+![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-text%20version-yellow?style=for-the-badge)<br>
+1. Klicke Oben links auf "**master**" <br>
+2. Klicke auf "**Update Project**" <br>
+3. Klicke auf "**OK**" <br>
+4. Projekt ist geupdatet <br>
+
+![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-video%20version-orange?style=for-the-badge)<br>
+1. Projekt Updaten <br>
+<img src="images/githubCloneCodeUpdateCode.gif" alt="Logo" width=auto height="350"><br><br>
+2. Projekt ist geupdatet <br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Unter [Praktikum/src/](https://github.com/JavaBoii/Praktikum/tree/master/src) findet ihr alle Aufgabenzettel.<br>
 In diesen Unterordnern findet ihr die .java-Datei. Diese könnt ihr in jedem Texteditor öffnen und den Code herauskopieren.
 Oder die Datei direkt in der IDE eurer Wahl einfügen.<br>
-
-<b>Wichtig:</b> Wenn ihr alle Zettel auf einmal haben möchtet, findet ihr oben rechts das Dropdown-Menü "<>Code".<br>
-Darüber könnt ihr das Repository entweder mithilfe von Git klonen oder dieses als eine .zip-Datei herunterladen.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Aufgabenzettel 1 - bewertet
-- [x] Aufgabenzettel 2 - bewertet
-- [x] Aufgabenzettel 3
-- [x] Aufgabenzettel 4
-- [ ] Aufgabenzettel 5
-- [ ] Aufgabenzettel 6
-- [ ] Aufgabenzettel 7
-- [ ] Aufgabenzettel 8
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
