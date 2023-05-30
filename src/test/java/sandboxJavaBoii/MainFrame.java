@@ -2,10 +2,8 @@ package sandboxJavaBoii;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.List;
 
 public class MainFrame extends JFrame {
 
