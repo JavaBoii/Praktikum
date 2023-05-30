@@ -1,5 +1,5 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/JavaBoii/Praktikum?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/JavaBoii/Praktikum?style=for-the-badge)
+[![GitHub last commit](https://img.shields.io/github/last-commit/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/commits/master)
+[![GitHub contributors](https://img.shields.io/github/contributors/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/graphs/contributors)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,14 +38,14 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Aufgabenzettel 1 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
-- [x] Aufgabenzettel 2 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
-- [x] Aufgabenzettel 3 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
-- [x] Aufgabenzettel 4 - ![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)
-- [x] Aufgabenzettel 5 - ![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)
-- [ ] Aufgabenzettel 6 - ![In Bearbeitung](https://img.shields.io/badge/-in%20bearbeitung-yellow)
-- [ ] Aufgabenzettel 7 - ![Missing](https://img.shields.io/badge/-------gesperrt---------red)
-- [ ] Aufgabenzettel 8 - ![Missing](https://img.shields.io/badge/-------gesperrt---------red)
+- [x] Aufgabenzettel 1 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_1)
+- [x] Aufgabenzettel 2 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_2)
+- [x] Aufgabenzettel 3 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_3)
+- [x] Aufgabenzettel 4 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_4)
+- [x] Aufgabenzettel 5 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_5)
+- [ ] Aufgabenzettel 6 - [![In Bearbeitung](https://img.shields.io/badge/-in%20bearbeitung-yellow)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
+- [ ] Aufgabenzettel 7 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
+- [ ] Aufgabenzettel 8 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +64,7 @@ Folge diesen Schritten, um das Projekt lokal zu installieren.
 
 
 ### Installation über Github
-![Instal](https://img.shields.io/badge/Repository%20herunterladen-text%20version-blue?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Repository%20herunterladen-text%20version-blue?style=for-the-badge)](#)<br>
    1. Klicke auf den grünen Button "Code" <br>
    2. Klicke auf "Download ZIP" <br>
    3. Entpacke die ZIP-Datei <br>
@@ -72,7 +72,7 @@ Folge diesen Schritten, um das Projekt lokal zu installieren.
    5. Klicke auf "**Trust Project**" <br>
    6. Im _src_ Ordner findest du alle Aufgabenzettel <br>
 
-![Instal](https://img.shields.io/badge/Repository%20herunterladen-video%20version-orange?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Repository%20herunterladen-video%20version-orange?style=for-the-badge)](#)<br>
 1. Herunterladen der Repository als ZIP-Datei <br>
 <img src="images/githubDownloadCode.gif" alt="Logo" width=auto height="350"><br><br>
 2. Entpacken der ZIP-Datei <br>
@@ -82,7 +82,7 @@ Folge diesen Schritten, um das Projekt lokal zu installieren.
 
 
 ### Installation über Git Version Control System (VCS)
-![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-text%20version-blue?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-text%20version-blue?style=for-the-badge)](#)<br>
 1. Klicke auf den grünen Button "Code" <br>
 2. Kopiere den Link (Bspsw. https://github.com/User/Repository.git) <br>
 3. Öffne deine IDE und klicke auf "**Get from VCS**" <br>
@@ -90,13 +90,13 @@ Folge diesen Schritten, um das Projekt lokal zu installieren.
 5. Klicke auf "**Trust Project**" <br>
 6. Im _src_ Ordner findest du alle Aufgabenzettel <br>
 
-![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-video%20version-orange?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Repository%20herunterladen%20mit%20VCS-video%20version-orange?style=for-the-badge)](#)<br>
 1. Kopieren des Links <br>
 <img src="images/githubCloneCode.gif" alt="Logo" width=auto height="350"><br><br>
 2. Projekt über VCS öffnen <br>
 <img src="images/githubCloneCodeVSC.gif" alt="Logo" width=auto height="350"><br><br>
 3. Wenn du das Projekt in der IDE updaten möchtest, gehe zum Abschnitt
-* [Updaten](#Updaten)
+* [Updaten](#Updaten-mit-VCS)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,13 +104,13 @@ Folge diesen Schritten, um das Projekt lokal zu installieren.
 
 <!-- Updaten -->
 ## Updaten mit VCS
-![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-text%20version-yellow?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-text%20version-yellow?style=for-the-badge)](#)<br>
 1. Klicke Oben links auf "**master**" <br>
 2. Klicke auf "**Update Project**" <br>
 3. Klicke auf "**OK**" <br>
 4. Projekt ist geupdatet <br>
 
-![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-video%20version-orange?style=for-the-badge)<br>
+[![Instal](https://img.shields.io/badge/Projekt%20updaten%20mit%20VCS-video%20version-orange?style=for-the-badge)](#)<br>
 1. Projekt Updaten <br>
 <img src="images/githubCloneCodeUpdateCode.gif" alt="Logo" width=auto height="350"><br><br>
 2. Projekt ist geupdatet <br>
