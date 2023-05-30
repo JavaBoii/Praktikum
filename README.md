@@ -1,5 +1,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/commits/master)
 [![GitHub contributors](https://img.shields.io/github/contributors/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/graphs/contributors)
+[![GitHub builds](https://img.shields.io/github/actions/workflow/status/JavaBoii/Praktikum/maven.yml?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/actions)
+[![GitHub issues](https://img.shields.io/github/issues/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/issues)
 
 <!-- PROJECT LOGO -->
 <br />
