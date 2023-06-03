@@ -6,9 +6,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://www.hochschule-ruhr-west.de/">
-    <img src="images/hrw_logo.png" alt="Logo" width=auto height="200">
-  </a>
 
 <h3 align="center">Software Praktikum 2</h3>
 
@@ -37,6 +34,8 @@
 
 ---
 
+[//]: # ([![In Bearbeitung]&#40;https://img.shields.io/badge/-in%20bearbeitung-yellow&#41;])
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -45,7 +44,7 @@
 - [x] Aufgabenzettel 3 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_3)
 - [x] Aufgabenzettel 4 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_4)
 - [x] Aufgabenzettel 5 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_5)
-- [ ] Aufgabenzettel 6 - [![In Bearbeitung](https://img.shields.io/badge/-in%20bearbeitung-yellow)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
+- [x] Aufgabenzettel 6 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
 - [ ] Aufgabenzettel 7 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
 - [ ] Aufgabenzettel 8 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_8)
 
