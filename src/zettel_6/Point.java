@@ -13,7 +13,8 @@ public class Point<T extends Number> {
         return Math.sqrt(Math.pow(this.x.doubleValue() - other.x.doubleValue(), 2)
                 + Math.pow(this.y.doubleValue() - other.y.doubleValue(), 2)
                 + Math.pow(this.z.doubleValue() - other.z.doubleValue(), 2));
-    }
+        //D = sqrt( (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 )
+    } // Formel: d = √((x2 - x1)² + (y2 - y1)² + (z2 - z1)²)
 
     @Override
     public String toString() {

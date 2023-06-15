@@ -1,5 +1,7 @@
 package zettel_5.aufgabe2;
 
+import styl.Styling;
+
 public abstract class AbstractNumberAnalyser {
     private String statisticName;
     private double[] numbers;

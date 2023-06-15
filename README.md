@@ -1,5 +1,4 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/commits/master)
-[![GitHub contributors](https://img.shields.io/github/contributors/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/graphs/contributors)
 [![GitHub builds](https://img.shields.io/github/actions/workflow/status/JavaBoii/Praktikum/maven.yml?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/actions)
 [![GitHub issues](https://img.shields.io/github/issues/JavaBoii/Praktikum?style=for-the-badge)](https://github.com/JavaBoii/Praktikum/issues)
 
@@ -45,7 +44,7 @@
 - [x] Aufgabenzettel 4 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_4)
 - [x] Aufgabenzettel 5 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_5)
 - [x] Aufgabenzettel 6 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
-- [ ] Aufgabenzettel 7 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
+- [x] Aufgabenzettel 7 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
 - [ ] Aufgabenzettel 8 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
