@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Create spherical list around (100.0, 100.0, 100.0)
-        var sphericalList = new SphericalList<Person, Double>(
-                new Point<Double>( 100.0, 100.0, 100.0)
+        var sphericalList = new SphericalList<Person, Double>(new Point<Double>( 100.0, 100.0, 100.0)
         );
         // Create some persons and place them into the sphere
         var bob = new Person("Bob", 23);
