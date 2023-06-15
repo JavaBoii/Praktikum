@@ -1,6 +1,7 @@
 package zettel_3;
 
 import java.util.Scanner;
+import styl.Styling;
 
 public class Main {
 

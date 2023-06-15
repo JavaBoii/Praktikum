@@ -1,4 +1,4 @@
-package zettel_3;
+package styl;
 
 public final class Styling {
     public static final String ULINE = "\u001B[4m";
@@ -13,8 +13,6 @@ public final class Styling {
     public static final String RESET = "\u001B[0m";
     public static final String NONE = "";
     public static final int SEPARATOR_SIZE = 35;
-
-    // Prevent instantiation
     private Styling() {
     }
 }
