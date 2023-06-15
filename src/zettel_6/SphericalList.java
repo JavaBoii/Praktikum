@@ -26,11 +26,13 @@ public class SphericalList<T, P extends Number> {
     }
 
     public void printInsideOut() {
-        while (!list.isEmpty()) {
+        List<SphericalElement<T, P>> copyList = new ArrayList<>(list);
+
+        while (!copyList.isEmpty()) {
             SphericalElement<T, P> closest = null;
             double closestDistance = Double.MAX_VALUE;
 
-            for (SphericalElement<T, P> element : list) {
+            for (SphericalElement<T, P> element : copyList) {
                 double distance = center.distanceTo(element.getPoint());
                 if (distance < closestDistance) {
                     closest = element;
@@ -41,8 +43,9 @@ public class SphericalList<T, P extends Number> {
             System.out.println("- distance of " + closest.getItem()
                     + " to center: " + String.format("%.6f", closestDistance));
 
-            list.remove(closest);
+            copyList.remove(closest);
         }
     }
+
 
 }
