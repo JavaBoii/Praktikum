@@ -25,7 +25,7 @@ public class SphericalList<T, P extends Number> {
         return result;
     }
 
-    public void printInsideOut() {
+    public void printInsideOut() {//replace by Comparator
         List<SphericalElement<T, P>> copyList = new ArrayList<>(list);
 
         while (!copyList.isEmpty()) {
