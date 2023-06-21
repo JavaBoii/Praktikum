@@ -11,7 +11,7 @@ public class Musician {
     public Musician(String name, int performances, Set<String> genres) {
         this.name = name;
         this.performances = performances;
-        this.genres = new HashSet<>(genres);
+        this.genres = new HashSet<>(genres); // Duplikate werden hier automatisch entfernt
     }
 
     public String getName() {
@@ -25,4 +25,6 @@ public class Musician {
     public Set<String> getGenres() {
         return genres;
     }
+
 }
+
