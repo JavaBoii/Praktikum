@@ -1,4 +1,4 @@
-package zettel_7;
+package zettel_7.aufgabe2;
 
 import java.util.HashSet;
 import java.util.Set;

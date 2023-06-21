@@ -1,7 +1,6 @@
-package zettel_7;
+package zettel_7.aufgabe2;
 
 import java.util.*;
-import styl.Styling;
 
 public class ApplicationProcess {
     private Queue<Musician> applications;

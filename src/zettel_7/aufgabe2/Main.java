@@ -1,9 +1,8 @@
-package zettel_7;
+package zettel_7.aufgabe2;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import styl.Styling;
 
 public class Main {
     public static void main(String[] args) {
