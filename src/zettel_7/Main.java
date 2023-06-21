@@ -1,7 +1,6 @@
 package zettel_7;
 
-import zettel_5.aufgabe2.Styling;
-
+import styl.Styling;
 import java.util.*;
 
 public class Main {
@@ -10,7 +9,7 @@ public class Main {
 
         Random rand = new Random(); // Random number generator
         int total = 100; // 100%
-        int stepSize = rand.nextInt(1, 5); // How much percent each step represents
+        int stepSize = 2; // How much percent each step represents
         int steps = total / stepSize;
 
 
@@ -45,6 +44,37 @@ public class Main {
         System.out.println("\n\nProcessing completed.");
     }
 
+    public static void fakeLoading(int speed) {
+        try {
+            for (int i = 0; i <= 100; i++) {
+                switch (i % 4) {
+                    case 0:
+                        System.out.print("\rLoading.   ");
+                        break;
+                    case 1:
+                        System.out.print("\rLoading..  ");
+                        break;
+                    case 2:
+                        System.out.print("\rLoading... ");
+                        break;
+                    case 3:
+                        System.out.print("\rLoading....");
+                        break;
+                }
+                Thread.sleep(speed);
+            }
+            System.out.print("\r            ");  // This line will overwrite the loading text
+            System.out.println();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(Styling.GREEN + "Loading completed." + Styling.RESET);
+    }
+
+
+
+
     public static void main(String[] args) {
         Musician m1 = new Musician("Alice", 1, new HashSet<>(Arrays.asList("Rock", "Pop")));
         Musician m2 = new Musician("Bob", 4, new HashSet<>(Collections.singletonList("Pop")));
@@ -70,7 +100,9 @@ public class Main {
         }
 
         System.out.println("=== Initial Application Status ===");
+        fakeLoading(60);
         printApplicationStatus(process);
+
 
         // Create Genre Histogram
         System.out.println("\n=== Genre Histogram Before Processing Applications ===");
@@ -80,10 +112,12 @@ public class Main {
         process.processApplications();
 
         System.out.println("\n=== Post-Processing Application Status ===");
+        fakeLoading(60);
         printApplicationStatus(process);
 
         // Print Rejected Applications
         System.out.println("\n=== Rejected Applications ===");
+        fakeLoading(60);
         process.getRejectedApplications().forEach(musician -> System.out.println(musician.getName()));
 
         // Print Accepted Musicians Sorted by Performances
@@ -92,6 +126,7 @@ public class Main {
 
         // Print Genres of Accepted Musicians
         System.out.println("\n=== Genres of Accepted Musicians ===");
+        fakeLoading(60);
         process.getAcceptedGenres().forEach((genre, count) -> System.out.println(genre + ": " + count));
 
         // Count Applications of a Specific Genre
@@ -100,6 +135,7 @@ public class Main {
 
         // Create Genre Histogram
         System.out.println("\n=== Genre Histogram ===");
+        fakeLoading(60);
         process.createGenreHistogram().forEach((genre, count) -> System.out.println(genre + ": " + count));
     }
 
