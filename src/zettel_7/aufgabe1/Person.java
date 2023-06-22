@@ -36,10 +36,4 @@ public class Person {
         Person otherPerson = (Person) o;
         return java.util.Objects.equals(name, otherPerson.name) && age == otherPerson.age;
     }
-
-    // Es ist guter Stil, immer eine hashCode-Methode bereitzustellen, wenn man die equals-Methode überschreibt
-    @Override
-    public int hashCode() {
-        return java.util.Objects.hash(name, age);
-    }
 }
