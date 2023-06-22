@@ -41,14 +41,6 @@ public class ApplicationProcess {
         return sortedMusicians;
     }
 
-    public int getApplicationCount() {
-        return applications.size();
-    }
-
-    public int getAcceptedMusicianCount() {
-        return acceptedMusicians.size();
-    }
-
     public Map<String, Integer> countMusicianGenres() {
         Map<String, Integer> genreCount = new HashMap<>();
         for (Musician musician : acceptedMusicians) {
