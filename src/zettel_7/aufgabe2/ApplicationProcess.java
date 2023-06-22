@@ -32,7 +32,7 @@ public class ApplicationProcess {
     }
 
     public Set<Musician> getRejectedApplications() {
-        return rejectedMusicians;
+        return Collections.unmodifiableSet(rejectedMusicians);
     }
 
     public List<Musician> getSortedAcceptedMusicians() {
