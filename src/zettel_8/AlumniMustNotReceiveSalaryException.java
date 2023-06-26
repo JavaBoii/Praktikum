@@ -1,5 +1,7 @@
 package zettel_8;
 
+import styl.Styling;
+
 public class AlumniMustNotReceiveSalaryException extends Exception {
     private Employee employee;
 
@@ -13,6 +15,6 @@ public class AlumniMustNotReceiveSalaryException extends Exception {
 
     @Override
     public String getMessage() {
-        return "Cannot pay salary to alumni employee: " + employee.getName();
+        return Styling.RED + "Error: alumni employee " + Styling.CYAN + employee.getName() + Styling.RESET;
     }
 }

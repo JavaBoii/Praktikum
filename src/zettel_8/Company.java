@@ -1,5 +1,7 @@
 package zettel_8;
 
+import styl.Styling;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,14 +22,19 @@ public class Company {
     }
 
     public void payEmployees() {
+        System.out.format("| %-30s | %-22s | %s |\n", "Status", "Employee", "Result");
+        System.out.format("| %-30s | %-22s | %s |\n", "------------------------------", "---------------", "------");
         for (Employee employee : employees) {
-
             try {
                 paymentProcessor.processPayment(employee);
             } catch (InsufficientBudgetException e) {
-                System.out.println(e.getMessage());
+                System.out.print(Styling.RED + "| " + String.format("%-30s", "Insufficient budget") + " | ");
+                System.out.print(String.format("%-22s", employee.getName()) + " |   ");
+                System.out.println(String.format("%s", "❌") + "   |" + Styling.RESET);
             } catch (AlumniMustNotReceiveSalaryException e) {
-                System.out.println(e.getMessage());
+                System.out.print(Styling.RED + "| " + String.format("%-30s", "Cannot pay alumni") + " | ");
+                System.out.print(String.format("%-22s", employee.getName()) + " |   ");
+                System.out.println(String.format("%s", "❌") + "   |" + Styling.RESET);
             }
         }
     }

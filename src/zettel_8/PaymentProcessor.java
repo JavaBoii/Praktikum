@@ -1,5 +1,7 @@
 package zettel_8;
 
+import styl.Styling;
+
 public class PaymentProcessor {
     private double availableBudget;
 
@@ -26,7 +28,9 @@ public class PaymentProcessor {
         if ((employee.getStatus() == Employee.Status.ACTIVE || employee.getStatus() == Employee.Status.ON_VACATION) && employee.getSalary() <= getAvailableBudget()) {
             employee.setAccountBalance(employee.getAccountBalance() + employee.getSalary());
             availableBudget -= employee.getSalary();
-            System.out.println("Paid salary to employee " + employee.getName());
+            System.out.print(Styling.GREEN + "| " + String.format("%-30s", "Paid salary") + " | ");
+            System.out.print(String.format("%-22s", employee.getName()) + " |   ");
+            System.out.println(String.format("%s", "✔") + "    |" + Styling.RESET);
         } else {
             throw new InsufficientBudgetException(employee, employee.getSalary() - getAvailableBudget());
         }
