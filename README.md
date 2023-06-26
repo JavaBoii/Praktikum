@@ -42,10 +42,10 @@
 - [x] Aufgabenzettel 2 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_2)
 - [x] Aufgabenzettel 3 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_3)
 - [x] Aufgabenzettel 4 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_4)
-- [x] Aufgabenzettel 5 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_5)
-- [x] Aufgabenzettel 6 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
-- [x] Aufgabenzettel 7 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
-- [ ] Aufgabenzettel 8 - [![Missing](https://img.shields.io/badge/-------gesperrt---------red)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_8)
+- [x] Aufgabenzettel 5 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_5)
+- [x] Aufgabenzettel 6 - [![Bewertet](https://img.shields.io/badge/-------bewertet-------brightgreen)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_6)
+- [x] Aufgabenzettel 7 - [![Fertig](https://img.shields.io/badge/-----------fertig-----------blue)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_7)
+- [x] Aufgabenzettel 8 - [![In Bearbeitung](https://img.shields.io/badge/-in%20bearbeitung-yellow)](https://github.com/JavaBoii/Praktikum/tree/master/src/zettel_8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
