@@ -20,7 +20,7 @@ public class PaymentProcessor {
         this.availableBudget = availableBudget;
     }
 
-    public void processPayment(Employee employee) throws InsufficientBudgetException, AlumniMustNotReceiveSalaryException {
+    public void processPayment(Employee employee, int counter) throws InsufficientBudgetException, AlumniMustNotReceiveSalaryException {
         if (employee.getStatus() == Employee.Status.ALUMNI) {
             throw new AlumniMustNotReceiveSalaryException(employee);
         }
@@ -28,7 +28,7 @@ public class PaymentProcessor {
         if ((employee.getStatus() == Employee.Status.ACTIVE || employee.getStatus() == Employee.Status.ON_VACATION) && employee.getSalary() <= getAvailableBudget()) {
             employee.setAccountBalance(employee.getAccountBalance() + employee.getSalary());
             availableBudget -= employee.getSalary();
-            System.out.print(Styling.GREEN + "| " + String.format("%-30s", "Paid salary") + " | ");
+            System.out.print(counter + Company.olo(counter) + Styling.GREEN + "| " + String.format("%-30s", "Paid salary") + " | ");
             System.out.print(String.format("%-22s", employee.getName()) + " |   ");
             System.out.println(String.format("%s", "✔") + "    |" + Styling.RESET);
         } else {
