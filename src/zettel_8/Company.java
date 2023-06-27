@@ -2,14 +2,14 @@ package zettel_8;
 
 import styl.Styling;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.text.NumberFormat;
 
 public class Company {
     private List<Employee> employees;
     private double budget;
     private PaymentProcessor paymentProcessor;
+    private double funds = 0;
 
     public Company(double budget) {
         this.budget = budget;
@@ -26,6 +26,10 @@ public class Company {
         employees.remove(employee);
     }
 
+    public double getFunds() {
+        return funds;
+    }
+
     public List<Employee> getEmployees() {
         return employees;
     }
@@ -36,6 +40,10 @@ public class Company {
 
     public void setBudget(double budget) {
         this.budget = budget;
+    }
+
+    public PaymentProcessor getPaymentProcessor() {
+        return paymentProcessor;
     }
 
     public static String olo(int counter) {
@@ -55,6 +63,9 @@ public class Company {
 
         int counter = 0;
         int input = 0;
+
+        NumberFormat nf = NumberFormat.getNumberInstance(Locale.GERMANY); // Germany uses period as thousand separator
+
         for (Employee employee : employees) {
             counter++;
             try {
@@ -62,7 +73,11 @@ public class Company {
             } catch (InsufficientBudgetException e) {
                 System.out.print(counter + olo(counter) + Styling.YELLOW + "| " + String.format("%-30s", "Insufficient budget") + " | ");
                 System.out.print(String.format("%-22s", employee.getName()) + " |   ");
-                System.out.println(String.format("%s", "❌") + "   |" + Styling.RESET);
+                System.out.print(String.format("%s", "❌") + "   |" + Styling.RESET);
+                String formattedAmount = nf.format(e.getAmount());
+                System.out.println(" Amount missing: " + formattedAmount + " €");
+
+                funds += e.getAmount();
             } catch (AlumniMustNotReceiveSalaryException e) {
                 System.out.print(counter + olo(counter) + Styling.RED + "| " + String.format("%-30s", "Cannot pay alumni") + " | ");
                 System.out.print(String.format("%-22s", employee.getName()) + " |   ");

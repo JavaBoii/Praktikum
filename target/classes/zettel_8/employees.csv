@@ -1,4 +1,4 @@
-Emily Davis,0.0,3900.0,HR
+Emily Davis,0.0,3900.21,HR
 David Wilson,0.0,4400.0,DEVOPS
 Sarah Thompson,0.0,3500.0,FINANCE
 Matthew Harris,0.0,4100.0,HR
@@ -8,13 +8,13 @@ Olivia Taylor,0.0,3800.0,HR
 Christopher Walker,0.0,4300.0,DEVOPS
 Sophia Thomas,0.0,3200.0,FINANCE
 James White,0.0,4000.0,HR
-Ava Garcia,0.0,3700.0,DEVOPS
+Ava Garcia,0.0,3700.69,DEVOPS
 Daniel Brown,0.0,3100.0,FINANCE
 Mia Lee,0.0,4200.0,HR
 Ethan Green,0.0,3900.0,DEVOPS
 Amelia Clark,0.0,3400.0,FINANCE
 Alexander Baker,0.0,3800.0,HR
-Sophia Rodriguez,0.0,4322200.0,DEVOPS
+Sophia Rodriguez,0.0,99999999999.0,DEVOPS
 Ethan Adams,0.0,3300.0,FINANCE
 Emily Campbell,0.0,4000.0,HR
 William Martinez,0.0,3900.0,DEVOPS
@@ -1409,7 +1409,7 @@ Ella Morris,0.0,3600.0,DEVOPS
 Henry Peterson,0.0,3200.0,FINANCE
 Lillian Bailey,0.0,3900.0,HR
 Jackson Rogers,0.0,4200.0,DEVOPS
-Elizabeth Cook,0.0,3400.0,FINANCE
+Elizabeth Cook,0.0,3400.24,FINANCE
 Andrew Bennett,0.0,4000.0,HR
 Madison Adams,0.0,3800.0,DEVOPS
 Samuel Foster,0.0,3100.0,FINANCE
@@ -1418,7 +1418,7 @@ David Turner,0.0,3900.0,DEVOPS
 Natalie Thompson,0.0,3300.0,FINANCE
 Sebastian Walker,0.0,4100.0,HR
 Aria Hall,0.0,3600.0,DEVOPS
-Michael Phillips,0.0,3200.0,FINANCE
+Michael Phillips,0.0,3200.99,FINANCE
 Chloe Butler,0.0,3900.0,HR
 Andrew Young,0.0,4200.0,DEVOPS
 Grace Hill,0.0,3400.0,FINANCE
@@ -2749,4 +2749,4 @@ Sakura Lefebvre,0.0,5600.0,DEVOPS
 Javier Goto,0.0,4700.0,FINANCE
 Amara Tremblay,0.0,6500.0,HR
 Hiroshi Santos,0.0,5300.0,DEVOPS
-Sophie Ito,0.0,4900.0,FINANCE
+Sophie Ito,0.0,694.0,FINANCE

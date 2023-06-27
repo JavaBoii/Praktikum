@@ -32,6 +32,14 @@ public class Employee {
         this.status = Status.ACTIVE;
     }
 
+    public Employee(String name, double accountBalance, double salary, Department department, Status status) {
+        this.name = name;
+        this.accountBalance = accountBalance;
+        this.salary = salary;
+        this.department = department;
+        this.status = status;
+    }
+
     // Getter setter
     public String getName() {
         return name;
