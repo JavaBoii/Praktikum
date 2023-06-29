@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Company company = new Company(120000.99);
-        //hello testo bullshitto
+        //hello
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("src/zettel_8/employees.csv"));
